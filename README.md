@@ -6,8 +6,8 @@ Bienvenue sur mon dépôt de travaux pratiques et de documentation technique. Ce
 
 ## Objectifs de ce dépôt
 * **Apprendre les bases des systèmes et réseaux :** Pratiquer la configuration d'équipements, la virtualisation et l'administration système.
-* **Dcocumenter mes acquis :**: Rédiger des fiches techniques claires et structurées.
-* **Préparer mon entrée en poste SOC L1 :** Démontrer ma maîtrise des fondamentaux réseau, du dépannage (*troubleshooting*) et de l'analyse d'incidents.
+* **Dcocumenter mes acquis :** Rédiger des fiches techniques claires et structurées.
+* **Préparer mon entrée en poste SOC L1 :** Démontrer ma maîtrise des fondamentaux réseau, du dépannage et de l'analyse d'incidents.
 * **Maintenir une pratique régulière.**
 
 ---
