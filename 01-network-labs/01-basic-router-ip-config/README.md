@@ -1,4 +1,4 @@
-# Lab 01 — Configuration de base d'un routeur et des clients sans fil
+# Lab 01 : Configuration de base d'un routeur et des clients sans fil
 
 * **Date** : 22/11/2026
 * **Outil** : Cisco Packet Tracer
@@ -9,7 +9,7 @@
 * Equipements utilisés : 
 * Plan d'adressasge IP : 
 
-![alt text]({A3C86DB9-9477-46E5-ABA9-70C98D56D63B}.png)
+
 ## Etape 1 : Connection des cables coaxiaux et réseaux
 * Connecter le répartiteur au modem avec un câble coaxial en branchant ce dernier dans le port 0 du modem et dans le port coaxial 1 du répartiteur.
 * Connecter le port coaxial 2 du répartiteur au port 0 de la TV.
@@ -31,13 +31,13 @@
 
 ## Etape 4 : Adressage IP et test de connectivité
 * Connectez l'ordinateur au réseau sans fil en utilisant le mot de passe définit précédemment.
-![alt text](connect-Wi-Fi-pc-portable.png)
+![alt text](images/connect-Wi-Fi-pc-portable.png)
 * Vérifier le statut du réseau sans fil.
-![alt text](verif-statut-réseau-pc-portable.png)
+![alt text](images/verif-statut-réseau-pc-portable.png)
 * Vérifier la connexion à Internet de l'ordinateur portable en allant sur une page Web.
-![alt text](verif-connection-pc-portable.png)
+![alt text](images/verif-connection-pc-portable.png)
 * Répéter l'étape précedente pour l'ordinateur de bureau.
-![alt text](verif-connection-pc-bureau.png)
+![alt text](iamges/verif-connection-pc-bureau.png)
 * Définir la passerelle sur DHCP pour l'ordinateur de la chambre afin d'attribuer automatiquement une adresse IP et les paramètres de connexion.
 * Vérifier la connexion à Internet de l'ordinateur de la chambre en allant sur une page Web.
-![alt text](verif-connection-pc-chambre.png)
+![alt text](images/verif-connection-pc-chambre.png)
