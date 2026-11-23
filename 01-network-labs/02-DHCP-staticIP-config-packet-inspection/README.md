@@ -15,9 +15,9 @@
 Une fois les 3 PCs connectés par câble au routeur :
 * Activer le protocole DHCP du PC0 dans IP Configuration ce qui envoi un paquet découverte en diffusion (broadcast).
 
-Discover packet :
+Discover packet :  
 ![alt text](images/DPU-PC0-DHCP-Discover-Packet.png)  
-Acknowledgement packet :
+Acknowledgement packet :  
 ![alt text](images/DPU-PC0-DHCP-ACK-Packet.png)  
 (passerelle par défaut est 192.168.5.1 car screenshot ultérieur)
 * Accéder au routeur à partir de l'adresse IP de la passerelle par défaut et d'un navigateur WEB.  
@@ -31,9 +31,9 @@ Acknowledgement packet :
 ## 3. Exercices supplémentaires personnel
 Ajouter un serveur et une imprimante wifi en IPv4 statique (ajout personnel à l'exercice CISCO)
 * Ajouter un serveur en connection câblé avec le routeur.
-* Configurer l'IP statique du serveur. 
+* Configurer l'IP statique du serveur.  
 ![alt text](images/config-ipv4static-serveur.png)  
-* Vérifier la connectivité du serveur à partir d'un PC.
+* Vérifier la connectivité du serveur à partir d'un PC.  
 ![alt text](images/verif-connexion-PC1-serveur.png)  
 * Activer le Wi-Fi 2,4 Ghz en activant le WPA2-PSK et le mot de passe suivant (l'imprimante n'accepte que des caractères ASCII) :
 ```console
@@ -42,9 +42,9 @@ DOWVbjqIJoKil0nwD1pCJz
 ![alt text](images/activ-wifi-routeur.png)  
 * Retirer le module PT-HOST-NM-1CE de l'imprimante (Ethernet uniquement).
 * Ajouter le module PT-HOST-NM-1W (Wifi disponible).
-* Configurer le wifi et l'adresse IPv4 statique.
+* Configurer le wifi et l'adresse IPv4 statique.  
 ![alt text](images/config-wifi-ipv4static-imprimante.png)  
-* Vérifier la connection entre PC et imprimante.
+* Vérifier la connection entre PC et imprimante.  
 ![alt text](images/verif-connexion-PC1-imprimante.png)  
 
 ## 4. Bilan 
