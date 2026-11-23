@@ -34,7 +34,7 @@ Ajouter un serveur et une imprimante wifi en IPv4 statique (ajout personnel à l
 * Configurer l'IP statique du serveur. 
 ![alt text](images/config-ipv4static-serveur.png)  
 * Vérifier la connectivité du serveur à partir d'un PC.
-![alt text](verif-connexion-PC1-serveur.png)  
+![alt text](images/verif-connexion-PC1-serveur.png)  
 * Activer le Wi-Fi 2,4 Ghz en activant le WPA2-PSK et le mot de passe suivant (l'imprimante n'accepte que des caractères ASCII) :
 ```console
 DOWVbjqIJoKil0nwD1pCJz
