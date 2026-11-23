@@ -28,7 +28,7 @@ Acknowledgement packet :
 * Vérifier la connectivité entre PCs avec ping "adresse IP des autres PC"
 ![alt text](images/CMD-LAN-verif-PC012.png)  
 
-## 3. Exercices supplémentaires personnel
+## 3. Exercices supplémentaires personnels
 Ajouter un serveur et une imprimante wifi en IPv4 statique (ajout personnel à l'exercice CISCO)
 * Ajouter un serveur en connection câblé avec le routeur.
 * Configurer l'IP statique du serveur.  
@@ -48,7 +48,4 @@ DOWVbjqIJoKil0nwD1pCJz
 ![alt text](images/verif-connexion-PC1-imprimante.png)  
 
 ## 4. Bilan 
-* Familiarisation avec le protocole DHCP.
-* Inspection des paquets réseaux avec le modèle OSI.
-* Configuration de périphérique en IPv4 statique.
-* Vérification de connectivité entre périphérique.
+Les objectifs ont été atteint sans encombre. L'adresse IP automatique donné par le DHCP au PC0 était décroissant au départ .100 au lieu de .26, mais en relançant ça c'est remis en ordre croissant. L'inspection des paquets en mode simulation à révélé l'ensemble du protocole DHCP (discover, offer, request et ACK) entre périphérique et routeur.
