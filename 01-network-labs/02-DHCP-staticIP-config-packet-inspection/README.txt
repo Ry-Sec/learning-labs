@@ -8,17 +8,20 @@
     * Vérifier la connectivité LAN de chaque PC au réseau.
     * (Ajout personnel d'exercices) Ajouter et configurer un serveur câblé et une imprimante WiFi en IPv4 statique.
     * (Ajout) Vérifier la connectivité LAN de l'imprimante et le serveur au réseau.
+---
 
-## 2. Étapes
+## 2. Étapes 
 ## Etape 1 : Activer le protocole DHCP sur PC0 et configurer le routeur
 Une fois les 3 PCs connectés par câble au routeur :
-* Activer le protocole DHCP du PC0 dans IP Configuration afin d'envoyer un paquet ARP au routeur pour associer une adresse IP à une adresse MAC.  
+* Activer le protocole DHCP du PC0 dans IP Configuration ce qui envoi un paquet découverte en diffusion (broadcast).
 
+Discover packet :
 ![alt text](images/DPU-PC0-DHCP-Discover-Packet.png)  
+Acknowledgement packet :
 ![alt text](images/DPU-PC0-DHCP-ACK-Packet.png)  
 (passerelle par défaut est 192.168.5.1 car screenshot ultérieur)
 * Accéder au routeur à partir de l'adresse IP de la passerelle par défaut et d'un navigateur WEB.  
-* Modifier l'adresse IP du routeur de 192.168.0.1 à 192.168.5.1 et sauvegarder et relancer la requête DHCP du PC0.
+* Modifier l'adresse IP du routeur de 192.168.0.1 à 192.168.5.1 puis sauvegarder et relancer la requête DHCP du PC0.
 * Modifier la plage d'adresse DHCP passant de 192.168.5.100 à 192.168.5.26
 * Modifier le nombre maximum d'utilisateurs à 75 et sauvegarder, puis relancer la requête DHCP du PC0.
 * Activer DHCP sur PC1 et PC2.
@@ -26,12 +29,13 @@ Une fois les 3 PCs connectés par câble au routeur :
 ![alt text](images/CMD-LAN-verif-PC012.png)  
 
 ## 3. Exercices supplémentaires personnel
-Ajouter un serveur et une imprimante wifi en IPv4 statique (ajout personnelle à l'exercice CISCO)
-* Ajouter un serveur et connection câblé avec le routeur.
+Ajouter un serveur et une imprimante wifi en IPv4 statique (ajout personnel à l'exercice CISCO)
+* Ajouter un serveur en connection câblé avec le routeur.
 * Configurer l'IP statique du serveur. 
 ![alt text](images/config-ipv4static-serveur.png)  
 * Vérifier la connectivité du serveur à partir d'un PC.
-* Activer le Wi-Fi 2,4 Ghz en activant le WPA2-PSK et le mot de passe suivant (l'imprimante n'accepte que des caractères ASCII).
+![alt text](verif-connexion-PC1-serveur.png)  
+* Activer le Wi-Fi 2,4 Ghz en activant le WPA2-PSK et le mot de passe suivant (l'imprimante n'accepte que des caractères ASCII) :
 ```console
 DOWVbjqIJoKil0nwD1pCJz
 ``` 
