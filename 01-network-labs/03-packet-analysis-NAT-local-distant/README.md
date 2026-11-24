@@ -10,10 +10,10 @@
 
 ## 2. Étapes
 ### Etape 1 : Analyser les en-têtes des paquets envoyés entre un ordinateur et un serveur Web.
-
-Paquet d'entré d'un ordinateur vers le routeur :     
-![alt text](images/PDU-IPv4-inbound.png)
-Paquet de sortie depuis le routeur vers site web :  
+* Envoyer un paquet vers un serveur Web (209.165.200.228) à partir d'un ordinateur (192.168.1.100).
+* Inspecter le paquet au niveau du routeur (entrée):     
+![alt text](images/PDU-IPv4-inbound.png)  
+* Inspecter le paquet au niveau du routeur (sortie) :  
 ![alt text](images/PDU-IPv4-outbound.png)
 
 * On voit bien l'adresse IPv4 privé 192.168.1.100 traduit en adresse IPv4 publique 209.165.200.227 à partir d'une table NAT dans le routeur.
@@ -73,4 +73,4 @@ Réponse écho :
 * A l'étape 2 il y a eu une ré-encapsulation d'une trame Wi-Fi en trame Ethernet.
 
 ## 3. Bilan
-Les analyses de paquets ont bien révélé le trajet suivi par un paquet de sa source à une destination dans un réseau local et dans un réseau distant, à travers des périphériques intermédiaires tels que switch, routeur et point d'accès. On y voit aussi les ré-encapsulations au niveau du routeur (changement de trame, d'adresse MAC) et du point d'accès (changement de trame Ethernet/Wi-Fi).
+Les analyses de paquets ont bien révélé le trajet suivi par un paquet, de sa source à une destination dans un réseau local et dans un réseau distant, à travers des périphériques intermédiaires tels que switch, routeur et point d'accès. On y voit aussi les ré-encapsulations au niveau du routeur (changement de trame, d'adresse MAC) et du point d'accès (changement de trame Ethernet/Wi-Fi).
