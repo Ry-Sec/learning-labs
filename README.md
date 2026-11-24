@@ -27,6 +27,7 @@ Et à venir :
 ### Réseaux 
 * **[Lab01](./01-network-labs/01-basic-router-ip-config/)** : configuration fondamentale de routeur et familiarisation avec le logiciel Cisco Packet Tracer.
 *  **[Lab02](./01-network-labs/02-DHCP-staticIP-config-packet-inspection/)** : configuration DHCP et IPv4 statique ainsi qu'inspection de paquets.
+* **[Lab03](./01-network-labs/03-packet-analysis-NAT-local-distant/)** : inspection et analyse de paquets dans un réseau local et distant.
 
 ### Cybersécurité 
 * *(À venir)*
