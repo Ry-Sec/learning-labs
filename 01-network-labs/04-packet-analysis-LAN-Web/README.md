@@ -29,6 +29,7 @@
 * Le réseau Finance est attribué le réseau IPv4 192.168.168.2.0/24 et le réseau Sales est attribué le réseau IPv4 192.168.3.0/24
 ![alt text](images/topologie-reseau-routeur.png)
 ## Etape 3 : Observer et analyser le flux de trafic dans le réseau avec un routeur
+### 3.1 Analyser le flux de trafic dans le réseau LAN
 * Vérifier qu'il n'y a pas d'adresse MAC dans le cache ARP de Sales 1 avec la commande arp -a (arp -d pour les supprimer si il y en a)
 * Ping Sales 1 à partir de Sales 2 en mode simulation.  
 ![alt text](images/routeur-drop-diffusion.png)  
@@ -47,7 +48,7 @@
 * Sales 2 renvoie un ping et cette fois-ci, le routeur connaît l'adresse MAC de Finance 1 et lui envoi directement le ping, qui va renvoyer un ping à Sales 2. Ce dernier le reçoit bien.
 ![alt text](images/2nd-ping-reception-sales2.png)
 
-### Envoyer un ping à un serveur Web sur Internet
+### 3.1 Analyser le flux de trafic dans le réseau Internet
 * Ping le serveur Web 209.165.200.112, à partir de Sales 2 192.168.3.3
 * 1er ping : le routeur demande en diffusion avec un paquet ARP : "Quelle est l'adresse MAC de l'adresse de destination IPv4 209.165.200.112 ?"
 L'ISP lui répond : "cette adresse est associé à l'adresse MAC 00D0.BAE0.A476". Puisque l'ISP le possède dans sa table de routage, il renvoie l'adresse MAC de l'interface par laquelle le message est arrivé.  
