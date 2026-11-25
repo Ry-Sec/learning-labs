@@ -1,11 +1,13 @@
 # Lab 04 : Observation et analyse de trafic dans un LAN non routé puis routé
+
 ## 1. Informations générales
 * **Date** : 25/11/2026
 * **Outil** : Cisco Packet Tracer (.pka du module 14 de "Notions de base sur les réseaux")
 * **Objectifs** : 
-    * Observer le flux de trafic dans un LAN non routé.
-    * Reconfigurer le réseau pour router entre les LANs.
-    * Observer le flux de trafic dans le réseau routé.
+    * [Observer le flux de trafic dans un LAN non routé.]( #etape-1--observation-et-analyse-de-flux-de-trafic-dans-un-lan-non-routé)
+    * [Reconfigurer le réseau pour router entre les LANs.](#etape-2--reconfiguration-du-réseau-pour-acheminer-entre-les-lan)
+    * [Observer le flux de trafic dans le réseau routé.](#etape-3--observation-et-analyse-du-flux-de-trafic-dans-le-réseau-avec-un-routeur)
+* [Bilan](#3-bilan)
 
 ## 2. Étapes 
 ### Etape 1 : Observation et analyse de flux de trafic dans un LAN non routé
@@ -14,6 +16,7 @@
 * Vérifier qu'il n'y a pas d'adresse MAC dans le cache ARP de Sales 1 avec la commande arp -a (arp -d pour les supprimer si il y en a)
 * Ping Sales 1 (192.168.1.7) à partir de Sales 2 (192.168.1.5) en mode simulation.  
 ![alt text](images/PDU-packet-sales-switch.png)
+
 | At Device  | Src MAC        | Dest. MAC      | Src IPv4    | Dest. IPv4  |
 | ---------- | -------------- | -------------- | ----------- | ----------- |
 | Sales (in) | 00E0.8FA9.B373 | FFFF.FFFF.FFFF | 192.168.1.5 | 192.168.1.7 |
