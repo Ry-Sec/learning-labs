@@ -8,12 +8,11 @@
     * Observer le flux de trafic dans le réseau routé.
 
 ## 2. Étapes 
-### Etape 1 : Observer et analyser le flux de trafic dans un LAN non routé
+### Etape 1 : Observation et analyse de flux de trafic dans un LAN non routé
 * Topologie du réseau LAN :
 ![alt text](images/topologie-reseau-LAN.png)  
 * Vérifier qu'il n'y a pas d'adresse MAC dans le cache ARP de Sales 1 avec la commande arp -a (arp -d pour les supprimer si il y en a)
 * Ping Sales 1 (192.168.1.7) à partir de Sales 2 (192.168.1.5) en mode simulation.  
-
 ![alt text](images/PDU-packet-sales-switch.png)
 | At Device  | Src MAC        | Dest. MAC      | Src IPv4    | Dest. IPv4  |
 | ---------- | -------------- | -------------- | ----------- | ----------- |
@@ -21,15 +20,13 @@
 * On voit bien la requête ARP de Sales 2 avec l'adresse de destination MAC FFFF.FFFF.FFFF (adresse de diffusion) depuis l'adresse MAC de Sales 2 afin de connaître l'adresse MAC associé à l'adresse IPv4 (Sales 2) qu'on a ping (absent de la table ARP).
 * Actuellement l'ensemble du réseau (Accounting, Finance et Sales) reçoit la requête ARP, ce qui réduit son efficacité dû au nombres de requête ARP diffusées (150 appareils connectés en LAN) et ce qui réduit sa sécurité.
 * Une fois la réponse ARP reçu à Sales 2, le ping est envoyé à Sales 1.
-
-## Etape 2 : Reconfigurer le réseau pour acheminer entre les LAN
-
+### Etape 2 : Reconfiguration du réseau pour acheminer entre les LAN
 * Connecter les switchs Finance et Sales au routeur Edge.
 * Entrez la commande ipconfig /renew sur chacun des périphériques de Finance et Sale afin d'accélérer le processus d'obtention de nouvelle adresse IP à partir du protocole DHCP.
 * Le réseau Finance est attribué le réseau IPv4 192.168.168.2.0/24 et le réseau Sales est attribué le réseau IPv4 192.168.3.0/24
 ![alt text](images/topologie-reseau-routeur.png)
-## Etape 3 : Observer et analyser le flux de trafic dans le réseau avec un routeur
-### 3.1 Analyser le flux de trafic dans le réseau LAN
+### Etape 3 : Observation et analyse du flux de trafic dans le réseau avec un routeur
+### 3.1 Observer et analyser le flux de trafic dans le réseau LAN
 * Vérifier qu'il n'y a pas d'adresse MAC dans le cache ARP de Sales 1 avec la commande arp -a (arp -d pour les supprimer si il y en a)
 * Ping Sales 1 à partir de Sales 2 en mode simulation.  
 ![alt text](images/routeur-drop-diffusion.png)  
@@ -48,7 +45,7 @@
 * Sales 2 renvoie un ping et cette fois-ci, le routeur connaît l'adresse MAC de Finance 1 et lui envoi directement le ping, qui va renvoyer un ping à Sales 2. Ce dernier le reçoit bien.
 ![alt text](images/2nd-ping-reception-sales2.png)
 
-### 3.1 Analyser le flux de trafic dans le réseau Internet
+### 3.1 Observer et analyser le flux de trafic dans le réseau Internet
 * Ping le serveur Web 209.165.200.112, à partir de Sales 2 192.168.3.3
 * 1er ping : le routeur demande en diffusion avec un paquet ARP : "Quelle est l'adresse MAC de l'adresse de destination IPv4 209.165.200.112 ?"
 L'ISP lui répond : "cette adresse est associé à l'adresse MAC 00D0.BAE0.A476". Puisque l'ISP le possède dans sa table de routage, il renvoie l'adresse MAC de l'interface par laquelle le message est arrivé.  
