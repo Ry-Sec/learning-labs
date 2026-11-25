@@ -9,6 +9,7 @@
     * [Observer le flux de trafic dans le réseau routé.](#etape-3--observation-et-analyse-du-flux-de-trafic-dans-le-réseau-avec-un-routeur)
 * [Bilan](#3-bilan)
 
+---
 ## 2. Étapes 
 ### Etape 1 : Observation et analyse de flux de trafic dans un LAN non routé
 ![alt ](images/topologie-reseau-LAN.png)  
@@ -24,13 +25,15 @@
 * Actuellement l'ensemble du réseau (Accounting, Finance et Sales) reçoit la requête ARP, ce qui réduit son efficacité dû au nombres de requête ARP diffusées (150 appareils connectés en LAN) et ce qui réduit sa sécurité.
 * Une fois la réponse ARP reçu à Sales 2, le ping est envoyé à Sales 1.
 
+---
 ### Etape 2 : Reconfiguration du réseau pour acheminer entre les LAN
 * Connecter les switchs Finance et Sales au routeur Edge.
 * Entrez la commande ipconfig /renew sur chacun des périphériques de Finance et Sale afin d'accélérer le processus d'obtention de nouvelle adresse IP à partir du protocole DHCP.
 * Le réseau Finance est attribué le réseau IPv4 `192.168.168.2.0/24` et le réseau Sales est attribué le réseau `IPv4 192.168.3.0/24`
-![alt text](images/topologie-reseau-routeur.png)
+![alt text](images/topologie-reseau-routeur.png)  
 *Figure 2 : Topologie du réseau LAN avec un routeur*
 
+----
 ### Etape 3 : Observation et analyse du flux de trafic dans le réseau avec un routeur
 ### 3.1. Observer et analyser le flux de trafic entre les réseaux LAN
 * Vérifier qu'il n'y a pas d'adresse MAC dans le cache ARP de Sales 1 avec la commande arp -a (arp -d pour les supprimer si il y en a)
@@ -51,7 +54,7 @@
 * Le routeur envoie une requête ARP au réseau de diffusion Finance. Finance 1 envoie son adresse MAC au routeur `00D0.972C.9DA6` afin qu'il l'ajoute à sa table ARP.
 * Le 1er ping time out.  
 ![alt text](images/1er-ping-timeout-finance.png)
-* Sales 2 renvoie un ping et cette fois-ci, le routeur connaît l'adresse MAC de Finance 1 et lui envoie directement le ping, qui va renvoyer un ping à Sales 2. Ce dernier le reçoit bien.
+* Sales 2 renvoie un ping et cette fois-ci, le routeur connaît l'adresse MAC de Finance 1 et lui envoie directement le ping, qui va renvoyer un ping à Sales 2. Ce dernier le reçoit bien.  
 ![alt text](images/2nd-ping-reception-sales2.png)
 
 ### 3.2. Observer et analyser le flux de trafic entre le réseau LAN et Internet
@@ -75,7 +78,14 @@ Le serveur web lui répond : "cette adresse est associé à l'adresse MAC `0006.
 
 #### 3.2.4. Dans le parcours du 4ème ping :
 * Le ping est bien reçu par le serveur Web puis renvoyé et reçu par Sales 2 étant donné que les adresses de destination MAC et IPv4 sont connues par les routeurs dans les deux sens.
-![alt text](images/PDU-4th-ping-web-cmd.png)
+![alt text](images/PDU-4th-ping-web-cmd.png)  
 
+---
 ## 3. Bilan
-L'exercice à permis une bien meilleur compréhension des communications entre périphériques hôtes et intermédiaires, notamment avec le protocole ARP, la table de routage et la table ARP. Il y avait une confusion importante lors du 3ème ping qui à time out, nécessitant de bien observer pour comprendre que l'ISP ne connaissait pas l'adresse MAC de l'adresse de destination de Sales 2. Je pensai que comme il connaissait l'adresse MAC du routeur EDGE il pouvait l'envoyer. Ce qui m'a aussi rendu perturbé, c'est que l'adresse IPv4 de destination était une adresse privée `192.168.0.0`, au lieu de publique, alors que c'est sur internet.
+L'exercice à permis une bien meilleur compréhension des communications entre périphériques hôtes et intermédiaires, notamment avec le protocole ARP, la table de routage et la table ARP. 
+
+Il y avait une confusion importante lors du 3ème ping qui à time out, nécessitant de bien observer pour comprendre que l'ISP ne connaissait pas l'adresse MAC de l'adresse de destination de Sales 2. Je pensai que comme il connaissait l'adresse MAC du routeur Eedge il pouvait l'envoyer. 
+
+Ce qui m'a aussi perturbé, c'est que l'adresse IPv4 de destination était une adresse privée `192.168.0.0`, au lieu de publique, alors que c'est sur internet.
+
+---
