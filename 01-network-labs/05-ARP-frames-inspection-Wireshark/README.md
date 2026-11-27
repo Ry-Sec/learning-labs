@@ -37,7 +37,7 @@
 ![alt text](images/ping-VM1-passerelle.png)  
 *VM1 est connecté à la passerelle par défaut.*
 * Pour vérifier la connectivité entre les deux VMs, passer le réseau Ethernet en type Réseau Privé sur les deux VMs puis aller dans le `Pare-feu Windows Defender avec fonctions avancées de sécurité`, ensuite dans `règles de trafic entrant`, cliquer sur `Partage de fichiers et d’imprimantes (Demande d’écho - Trafic entrant ICMPv4)` et activé la règle. Les pings sont bloqués par défaut sur win11.
-![alt text](images/echo-enable-VM1-VM2.png)
+![alt text](images/echo-enable-VM1-VM2.png)  
 ![alt text](images/ping-VM1-VM2.png)  
 *VM1 est bien connecté à VM2*
 * Arrêter la capture de données dans Wireshark.
