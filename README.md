@@ -18,7 +18,8 @@ Afin d'illustrer ma démarche d'apprentissage concret vers le métier d'Analyste
 *  **[Lab02](./01-network-labs/02-DHCP-staticIP-config-packet-inspection/)** : Configuration DHCP et IPv4 statique ainsi qu'inspection de paquets.
 * **[Lab03](./01-network-labs/03-packet-analysis-NAT-local-distant/)** : Inspection et analyse de paquets dans un réseau local et distant.
 * **[Lab04](./01-network-labs/04-packet-analysis-LAN-Web/)** : Analyse de paquets en réseau LAN et réseau Internet.
-* **[Lab05](./01-network-labs/05-ARP-Frames-analysis-Wireshark-Win11-ProxMoxVE/)** : Analyse de trames ARP avec Wireshark, Win11 Entreprise et ProxMoxVE.
+* **[Lab05](./01-network-labs/05-ARP-frames-inspection-Wireshark/)** : Examen de trames ARP avec Wireshark, Win11 Entreprise et Proxmox VE.
+* **[Lab06](./01-network-labs/06-ARP-frames-analysis-Wireshark/)** : Analyse de trames ARP avec Wirehsark, Win11, Entreprise et Proxmox VE.
 
 ### Cybersécurité 
 * *(À venir)*

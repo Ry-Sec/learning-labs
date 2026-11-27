@@ -3,4 +3,5 @@
 *  **[Lab02](./02-DHCP-staticIP-config-packet-inspection/)** : Configuration DHCP et IPv4 statique ainsi qu'inspection de paquets.
 * **[Lab03](./03-packet-analysis-NAT-local-distant/)** : Inspection et analyse de paquets dans un réseau local et distant.
 * **[Lab04](./04-packet-analysis-LAN-Web/)** : Analyse de paquets en réseau LAN et réseau Internet.
-* **[Lab05](./05-ARP-Frames-analysis-Wireshark-Win11-ProxMoxVE/)** : Analyse de trames ARP avec Wireshark, Win11 Entreprise et ProxMoxVE.
+* **[Lab05](./05-ARP-frames-inspection-Wireshark/)** : Examen de trames ARP avec Wireshark, Win11 Entreprise et Proxmox VE.
+* **[Lab06](./06-ARP-frames-analysis-Wireshark/)** : Analyse de trames ARP avec Wirehsark, Win11, Entreprise et Proxmox VE.
